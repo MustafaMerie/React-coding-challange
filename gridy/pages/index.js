@@ -2,6 +2,7 @@ import React from "react";
 import { fetchPhotos } from "./api/unsplash";
 import PhotosList from "../components/PhotosList";
 import Head from "next/head";
+import Message from "../components/Message";
 
 function Home({ total, results, error }) {
   return (
@@ -12,7 +13,7 @@ function Home({ total, results, error }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {error && <h4>{error}</h4>}
+      {error && <Message variant="danger">{error}</Message>}
       {results && (
         <>
           <p className="lead text-center py-3">
