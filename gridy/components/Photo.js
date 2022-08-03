@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { defaultBlurDataUrl } from "../shared/defaultBlurDataUrl";
 
 function Photo({ photo }) {
   const {
@@ -18,6 +19,8 @@ function Photo({ photo }) {
         height={height}
         src={urls.regular}
         alt={alt_description}
+        blurDataURL={defaultBlurDataUrl}
+        placeholder="blur"
       />
       <div className={styles.photo_on_hover_content}>
         <Image
