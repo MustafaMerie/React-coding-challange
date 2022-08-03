@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
-import Image from "next/image";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchPhotos } from "../pages/api/unsplash";
 import Masonry from "react-masonry-css";
 import styles from "../styles/Home.module.css";
+import Photo from "./Photo";
 
 function PhotosList({ results, total, error }) {
   const [photos, setPhotos] = useState(results);
@@ -15,7 +15,7 @@ function PhotosList({ results, total, error }) {
     if (photos && total) {
       setHasMore(total > photos.length ? true : false);
     }
-  }, [photos, total, error]);
+  }, [photos, total]);
 
   const masonryBreakpointColumnsObj = {
     default: 4,
@@ -57,15 +57,7 @@ function PhotosList({ results, total, error }) {
             columnClassName={styles.masonry_grid_column}
           >
             {photos &&
-              photos.map((photo, i) => (
-                <Image
-                  key={i}
-                  width={photo.width}
-                  height={photo.height}
-                  src={photo.urls.regular}
-                  alt={photo.alt_description}
-                />
-              ))}
+              photos.map((photo, i) => <Photo key={i} photo={photo} />)}
           </Masonry>
         </InfiniteScroll>
       )}
