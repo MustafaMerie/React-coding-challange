@@ -1,3 +1,5 @@
+/* Header componnent */
+
 .header {
   background-image: url("../public/home_bg.jpg");
   background-repeat: no-repeat;
@@ -22,6 +24,8 @@
   background: #000;
   opacity: 0.6;
 }
+
+/* Photos grid */
 
 .masonry_grid {
   display: flex;
@@ -75,4 +79,28 @@
   margin-top: 15px;
   margin-left: 8px;
   font-size: 14px;
+}
+
+/* LightBox */
+
+.download_link {
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #222;
+  padding: 8px 5px;
+  margin-left: 15px;
+}
+
+.download_link > span,
+.photo_user_name_modal > span {
+  vertical-align: middle;
+}
+
+.photo_likes > span {
+  vertical-align: text-top;
+}
+
+.photo_user_name_modal > a {
+  margin-left: 8px;
+  color: #000;
 }

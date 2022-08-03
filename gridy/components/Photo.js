@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { defaultBlurDataUrl } from "../shared/defaultBlurDataUrl";
+import LightBox from "./LightBox";
 
 function Photo({ photo }) {
+  const [lightBoxShow, setLightBoxShow] = useState(false);
+
   const {
     urls,
     alt_description,
@@ -13,7 +16,7 @@ function Photo({ photo }) {
   } = photo;
 
   return (
-    <div className={styles.photo_container}>
+    <div className={styles.photo_container} onClick={() => setLightBoxShow(true)}>
       <Image
         width={width}
         height={height}
@@ -32,6 +35,12 @@ function Photo({ photo }) {
         />
         <p className={styles.photo_on_hover_user_name}>{name}</p>
       </div>
+
+      <LightBox
+        show={lightBoxShow}
+        onHide={() => setLightBoxShow(false)}
+        photo={photo}
+      />
     </div>
   );
 }
