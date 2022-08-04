@@ -104,3 +104,10 @@
   margin-left: 8px;
   color: #000;
 }
+
+/* Scroll To Top Button */
+.scroll_to_top_btn {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}

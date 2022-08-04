@@ -3,6 +3,7 @@ import { fetchPhotos } from "./api/unsplash";
 import PhotosList from "../components/PhotosList";
 import Head from "next/head";
 import Message from "../components/Message";
+import ScrollToTop from "../components/ScrollToTop";
 
 function Home({ total, results, error }) {
   return (
@@ -12,6 +13,7 @@ function Home({ total, results, error }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <ScrollToTop />
 
       {error && <Message variant="danger">{error}</Message>}
       {results && (
