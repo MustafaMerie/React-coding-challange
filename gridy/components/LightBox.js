@@ -38,6 +38,8 @@ function LightBox(props) {
                 width={45}
                 height={45}
                 src={profile_image.medium}
+                blurDataURL={defaultBlurDataUrl}
+                placeholder="blur"
                 alt="user image"
                 className="d-inline-block rounded-circle"
               />

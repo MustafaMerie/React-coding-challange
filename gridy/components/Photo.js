@@ -16,32 +16,41 @@ function Photo({ photo }) {
   } = photo;
 
   return (
-    <div className={styles.photo_container} onClick={() => setLightBoxShow(true)}>
-      <Image
-        width={width}
-        height={height}
-        src={urls.regular}
-        alt={alt_description}
-        blurDataURL={defaultBlurDataUrl}
-        placeholder="blur"
-      />
-      <div className={styles.photo_on_hover_content}>
-        <Image
-          width={45}
-          height={45}
-          src={profile_image.medium}
-          alt="user image"
-          className="d-inline-block rounded-circle"
-        />
-        <p className={styles.photo_on_hover_user_name}>{name}</p>
-      </div>
+    <>
+      {photo && (
+        <div
+          className={styles.photo_container}
+          onClick={() => setLightBoxShow(true)}
+        >
+          <Image
+            width={width}
+            height={height}
+            src={urls.regular}
+            alt={alt_description}
+            blurDataURL={defaultBlurDataUrl}
+            placeholder="blur"
+          />
+          <div className={styles.photo_on_hover_content}>
+            <Image
+              width={45}
+              height={45}
+              src={profile_image.medium}
+              blurDataURL={defaultBlurDataUrl}
+              placeholder="blur"
+              alt="user image"
+              className="d-inline-block rounded-circle"
+            />
+            <p className={styles.photo_on_hover_user_name}>{name}</p>
+          </div>
 
-      <LightBox
-        show={lightBoxShow}
-        onHide={() => setLightBoxShow(false)}
-        photo={photo}
-      />
-    </div>
+          <LightBox
+            show={lightBoxShow}
+            onHide={() => setLightBoxShow(false)}
+            photo={photo}
+          />
+        </div>
+      )}
+    </>
   );
 }
 
