@@ -46,7 +46,9 @@ function PhotosList({ results, total, error }) {
           next={() => fetchNextPage(setPage(page + 1))}
           hasMore={hasMore}
           loader={<Message>Loading...</Message>}
-          endMessage={<Message variant="success">Yay! You have seen it all</Message>}
+          endMessage={
+            <Message variant="success">Yay! You have seen it all</Message>
+          }
         >
           <Masonry
             breakpointCols={masonryBreakpointColumnsObj}
