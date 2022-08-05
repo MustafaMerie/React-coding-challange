@@ -1,8 +1,29 @@
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+Gridy is a fully responsive, beautifully designed and simple NextJS app that allows viewing and interacting with a grid of photos from Unsplash API.
+
+### Project Status
+This project is Completed as v1. Displaying a grid of photos with the ability of infinite scrolling, using a lazy-load strategy to fetch additional images as the user scrolls. Also, the user has the ability to see the full photo in a full width with more information about it by clicking on the photo.
+
+
+### Built With
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+* [![Next][Next.js]][Next-url]
+* [![React][React.js]][React-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
-First, run the development server:
+### Project Screen Shot(s)
+![Screenshot](https://i.ibb.co/KGBsncw/Screen-Shot-2022-08-05-at-8-22-33-PM.png)
+
+![Screenshot](https://i.ibb.co/Ns19ryj/Screen-Shot-2022-08-05-at-8-23-00-PM.png)
+
+
+
+### Getting Started
+
+First, make sure that you are in the directory, then run the development server:
 
 ```bash
 npm run dev
@@ -14,21 +35,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**NOTE:** The project requires ACCESS KEY for Unsplash API in order to run.  You can implement your own access key by creating `.env` file in the root folder, then implement the access key under the name of  `NEXT_PUBLIC_UNSPLASH_API_ACCESS_KEY`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+> NEXT_PUBLIC_UNSPLASH_API_ACCESS_KEY=BOPdHe**************************
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
