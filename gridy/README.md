@@ -23,7 +23,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### Getting Started
 
-First, make sure that you are in the directory, then run the development server:
+First, make sure that you are in the root directory, then run the development server:
 
 ```bash
 npm run dev
